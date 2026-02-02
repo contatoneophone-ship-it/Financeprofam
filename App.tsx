@@ -13,6 +13,7 @@ import EntityManager from './components/Entities/EntityManager';
 import ReportManager from './components/Reports/ReportManager';
 import InvestmentManager from './components/Investments/InvestmentManager';
 import SettingsManager from './components/Settings/SettingsManager';
+import AIInsights from './components/AI/AIInsights';
 import LoginForm from './components/Auth/LoginForm';
 
 const AppContent: React.FC = () => {
@@ -40,6 +41,8 @@ const AppContent: React.FC = () => {
         );
       case 'trans':
         return <TransactionList />;
+      case 'ai':
+        return <AIInsights />;
       case 'inv':
         return <InvestmentManager />;
       case 'ent':
@@ -98,7 +101,6 @@ const AppContent: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 items-center">
-             {/* Mobile User Name Display */}
              <div className="lg:hidden flex items-center justify-between w-full bg-white/10 p-4 rounded-2xl border border-white/10 mb-2">
                 <div className="flex items-center gap-3">
                   <UserIcon className="text-white w-4 h-4" />
